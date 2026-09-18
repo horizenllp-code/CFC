@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="1000" height="450">
+  <defs>
+    <!-- Arrow Body Mask -->
+    <clipPath id="arrowShaftClip">
+      <path d="M 45 84 Q 16 195 38 322 L 168 322 L 168 84 Z" />
+    </clipPath>
+
+    <!-- Letter C1 Clip -->
+    <clipPath id="c1Clip">
+      <path d="M 445 70 C 340 40 260 95 220 165 C 190 220 200 280 250 325 C 310 355 380 345 445 320 L 445 255 C 390 275 340 265 310 240 C 280 215 280 180 310 155 C 340 130 390 120 445 140 Z" />
+    </clipPath>
+
+    <!-- Letter F Clip -->
+    <clipPath id="fClip">
+      <path d="M 485 64 L 665 64 L 665 140 L 560 140 L 560 185 L 642 185 L 642 250 L 560 250 L 560 328 L 485 328 Z" />
+    </clipPath>
+
+    <!-- Letter C2 Clip -->
+    <clipPath id="c2Clip">
+      <path d="M 920 70 C 815 40 735 95 695 165 C 665 220 675 280 725 325 C 785 355 855 345 920 320 L 920 255 C 865 275 815 265 785 240 C 755 215 755 180 785 155 C 815 130 865 120 920 140 Z" />
+    </clipPath>
+
+    <!-- Gradients -->
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E2F2ED" />
+      <stop offset="100%" stop-color="#B8E2DC" />
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4AA4B2" />
+      <stop offset="100%" stop-color="#348492" />
+    </linearGradient>
+  </defs>
+
+  <!-- ==================== 1. ARROW ICON ==================== -->
+  <!-- 3D Shadow under Head -->
+  <polygon points="115,74 24,84 38,94 115,82 195,94 208,84" fill="#881216" />
+  <!-- Red Arrow Head -->
+  <path d="M 115 6 L 16 75 C 65 63 115 72 115 72 C 115 72 165 63 214 75 Z" fill="#D32027" stroke="#B3181E" stroke-width="2" stroke-linejoin="round" />
+
+  <!-- Arrow Shaft Chevrons -->
+  <g clip-path="url(#arrowShaftClip)">
+    <rect x="0" y="80" width="180" height="250" fill="#D32027" />
+    <!-- Chevrons Pattern -->
+    <g stroke="#D32027" stroke-width="4.5" stroke-linejoin="round">
+      <path d="M -10 135 L 105 80 L 220 135 L 220 100 L 105 45 L -10 100 Z" fill="#DFB183" />
+      <path d="M -10 170 L 105 115 L 220 170 L 220 135 L 105 80 L -10 135 Z" fill="#1B499A" />
+      <path d="M -10 205 L 105 150 L 220 205 L 220 170 L 105 115 L -10 170 Z" fill="#DFB183" />
+      <path d="M -10 240 L 105 185 L 220 240 L 220 205 L 105 150 L -10 205 Z" fill="#1B499A" />
+      <path d="M -10 275 L 105 220 L 220 275 L 220 240 L 105 185 L -10 240 Z" fill="#DFB183" />
+      <path d="M -10 310 L 105 255 L 220 310 L 220 275 L 105 220 L -10 275 Z" fill="#1B499A" />
+      <path d="M -10 345 L 105 290 L 220 345 L 220 310 L 105 255 L -10 310 Z" fill="#DFB183" />
+    </g>
+  </g>
+
+  <!-- ==================== 2. LETTER C (FORKLIFT & PORT) ==================== -->
+  <g clip-path="url(#c1Clip)">
+    <rect x="180" y="40" width="280" height="190" fill="url(#skyGrad)" />
+    <rect x="180" y="230" width="280" height="130" fill="url(#waterGrad)" />
+    <!-- Distant shore line -->
+    <polygon points="180,230 460,225 460,248 180,252" fill="#3D4A56" />
+    
+    <!-- Stacked Containers Background Left -->
+    <rect x="195" y="125" width="95" height="70" fill="#183664" stroke="#0E2342" stroke-width="2.5" />
+    <rect x="195" y="60" width="95" height="65" fill="#C5282F" stroke="#8E171C" stroke-width="2.5" />
+    <rect x="290" y="85" width="130" height="60" fill="#E85D26" stroke="#AA3A10" stroke-width="2.5" />
+
+    <!-- Orange Counterbalance Forklift -->
+    <g transform="translate(255, 172)">
+      <!-- Counterweight and Chassis -->
+      <path d="M 12 36 L 18 12 L 40 12 L 50 36 Z" fill="#202933" />
+      <rect x="2" y="32" width="60" height="34" rx="6" fill="#F16823" stroke="#B8420A" stroke-width="2" />
+      <rect x="48" y="8" width="8" height="58" fill="#181F26" />
+      <!-- Fork Carriage and load -->
+      <polygon points="56,58 82,58 82,63 56,63" fill="#8090A0" />
+      <rect x="58" y="40" width="24" height="18" fill="#DCA366" stroke="#9E6E38" stroke-width="1.5" />
+      <!-- Big Wheels -->
+      <circle cx="18" cy="66" r="13" fill="#1C2229" stroke="#0F1317" stroke-width="2" />
+      <circle cx="18" cy="66" r="5" fill="#6A7A8C" />
+      <circle cx="52" cy="66" r="13" fill="#1C2229" stroke="#0F1317" stroke-width="2" />
+      <circle cx="52" cy="66" r="5" fill="#6A7A8C" />
+    </g>
+  </g>
+
+  <!-- ==================== 3. LETTER F (SUSPENDED CRANE CONTAINER) ==================== -->
+  <g clip-path="url(#fClip)">
+    <rect x="460" y="40" width="220" height="300" fill="#D3ECE2" />
+    <!-- Foliage in background -->
+    <circle cx="535" cy="180" r="48" fill="#78B282" />
+    <circle cx="620" cy="175" r="54" fill="#6EA878" />
+
+    <!-- Crane Rigging Cables -->
+    <line x1="575" y1="35" x2="505" y2="72" stroke="#1D2329" stroke-width="2.5" />
+    <line x1="575" y1="35" x2="645" y2="72" stroke="#1D2329" stroke-width="2.5" />
+
+    <!-- Suspended Red Shipping Container -->
+    <rect x="495" y="70" width="155" height="58" rx="3" fill="#D32027" stroke="#8A1318" stroke-width="3" />
+    <!-- Vertical corrugations -->
+    <g stroke="#8A1318" stroke-width="2.5">
+      <line x1="518" y1="70" x2="518" y2="128" />
+      <line x1="540" y1="70" x2="540" y2="128" />
+      <line x1="562" y1="70" x2="562" y2="128" />
+      <line x1="584" y1="70" x2="584" y2="128" />
+      <line x1="606" y1="70" x2="606" y2="128" />
+      <line x1="628" y1="70" x2="628" y2="128" />
+    </g>
+
+    <!-- Lower Stacked Containers -->
+    <rect x="480" y="195" width="70" height="145" fill="#E25925" stroke="#9B3510" stroke-width="2.5" />
+    <rect x="550" y="205" width="130" height="135" fill="#D32027" stroke="#8A1318" stroke-width="2.5" />
+    <g stroke="#8A1318" stroke-width="2.5">
+      <line x1="578" y1="205" x2="578" y2="340" />
+      <line x1="606" y1="205" x2="606" y2="340" />
+      <line x1="634" y1="205" x2="634" y2="340" />
+    </g>
+  </g>
+
+  <!-- ==================== 4. LETTER C (CONTAINERS ON DECK) ==================== -->
+  <g clip-path="url(#c2Clip)">
+    <rect x="670" y="40" width="260" height="300" fill="#D6ECE4" />
+    <circle cx="765" cy="175" r="58" fill="#75AF7E" />
+
+    <!-- Top Red Container -->
+    <rect x="745" y="65" width="175" height="58" rx="2" fill="#D32027" stroke="#8A1318" stroke-width="2.5" />
+    <g stroke="#8A1318" stroke-width="2.5">
+      <line x1="775" y1="65" x2="775" y2="123" />
+      <line x1="808" y1="65" x2="808" y2="123" />
+      <line x1="841" y1="65" x2="841" y2="123" />
+      <line x1="874" y1="65" x2="874" y2="123" />
+    </g>
+
+    <!-- Orange Middle Container -->
+    <rect x="690" y="160" width="185" height="60" fill="#E85D26" stroke="#A63810" stroke-width="2.5" />
+
+    <!-- Big Crimson Container Bottom -->
+    <rect x="685" y="218" width="245" height="125" fill="#B71C22" stroke="#751014" stroke-width="3" />
+    <g stroke="#751014" stroke-width="2.5">
+      <line x1="725" y1="218" x2="725" y2="343" />
+      <line x1="765" y1="218" x2="765" y2="343" />
+      <line x1="805" y1="218" x2="805" y2="343" />
+      <line x1="845" y1="218" x2="845" y2="343" />
+      <line x1="885" y1="218" x2="885" y2="343" />
+    </g>
+  </g>
+
+  <!-- ==================== 5. WORD LOGISTICS ==================== -->
+  <!-- L -->
+  <g transform="translate(26, 350)">
+    <path d="M 0 0 L 38 0 L 38 68 L 84 68 L 84 96 L 0 96 Z" fill="#183863" stroke="#0E2342" stroke-width="1.5" />
+    <rect x="0" y="58" width="84" height="38" fill="#B71C1C" stroke="#751014" stroke-width="1.5" />
+    <rect x="0" y="58" width="38" height="38" fill="#183863" stroke="#0E2342" stroke-width="1.5" />
+  </g>
+
+  <!-- O -->
+  <g transform="translate(130, 350)">
+    <path d="M 48 0 C 100 0 100 96 48 96 C -4 96 -4 0 48 0 Z M 48 26 C 26 26 26 70 48 70 C 70 70 70 26 48 26 Z" fill="#B71C1C" stroke="#751014" stroke-width="1.5" />
+    <rect x="36" y="0" width="24" height="96" fill="#F4F4F4" stroke="#D0D0D0" stroke-width="1" />
+    <rect x="44" y="24" width="8" height="48" fill="#111111" />
+  </g>
+
+  <!-- G -->
+  <g transform="translate(250, 350)">
+    <path d="M 54 0 C 105 0 105 45 L 68 45 C 68 26 50 26 48 26 C 28 26 28 70 48 70 C 68 70 68 58 50 58 L 50 42 L 102 42 L 102 82 C 84 96 50 96 48 96 C -4 96 -4 0 54 0 Z" fill="#163259" stroke="#0C1D36" stroke-width="1.5" />
+    <rect x="0" y="48" width="102" height="48" fill="#1976D2" opacity="0.88" />
+  </g>
+
+  <!-- I -->
+  <g transform="translate(372, 350)">
+    <rect x="0" y="0" width="36" height="96" fill="#1A53A0" stroke="#0F3366" stroke-width="1.5" />
+    <line x1="18" y1="0" x2="18" y2="96" stroke="#0E2C55" stroke-width="2.5" />
+  </g>
+
+  <!-- S -->
+  <g transform="translate(426, 350)">
+    <path d="M 12 24 C 22 0 52 0 52 0 C 82 0 88 24 88 24 L 58 28 C 56 18 46 18 46 18 C 36 18 36 26 48 30 C 90 38 90 72 90 72 C 90 96 50 96 48 96 C 8 96 4 72 4 72 L 32 68 C 34 78 46 78 46 78 C 58 78 58 68 48 64 C 12 56 12 24 12 24 Z" fill="#163259" stroke="#0C1D36" stroke-width="1.5" />
+    <rect x="0" y="48" width="94" height="48" fill="#00897B" opacity="0.8" />
+  </g>
+
+  <!-- T -->
+  <g transform="translate(540, 350)">
+    <path d="M 0 0 L 88 0 L 88 26 L 58 26 L 58 96 L 30 96 L 30 26 L 0 26 Z" fill="#558B2F" stroke="#37581E" stroke-width="1.5" />
+    <rect x="30" y="26" width="28" height="70" fill="#9E9D24" stroke="#686716" stroke-width="1.5" />
+  </g>
+
+  <!-- I -->
+  <g transform="translate(646, 350)">
+    <rect x="0" y="0" width="36" height="96" fill="#9E9D24" stroke="#686716" stroke-width="1.5" />
+    <line x1="18" y1="0" x2="18" y2="96" stroke="#5E5D12" stroke-width="2.5" />
+  </g>
+
+  <!-- C -->
+  <g transform="translate(702, 350)">
+    <path d="M 52 0 C 102 0 102 36 L 68 40 C 66 26 50 26 48 26 C 28 26 28 70 48 70 C 68 70 68 58 68 58 L 102 62 C 96 96 50 96 48 96 C -4 96 -4 0 52 0 Z" fill="#EF6C00" stroke="#A84C00" stroke-width="1.5" />
+    <rect x="0" y="48" width="102" height="48" fill="#C62828" opacity="0.85" />
+  </g>
+
+  <!-- S -->
+  <g transform="translate(824, 350)">
+    <path d="M 12 24 C 22 0 52 0 52 0 C 82 0 88 24 88 24 L 58 28 C 56 18 46 18 46 18 C 36 18 36 26 48 30 C 90 38 90 72 90 72 C 90 96 50 96 48 96 C 8 96 4 72 4 72 L 32 68 C 34 78 46 78 46 78 C 58 78 58 68 48 64 C 12 56 12 24 12 24 Z" fill="#00897B" stroke="#005B52" stroke-width="1.5" />
+    <rect x="0" y="48" width="94" height="48" fill="#4DB6AC" opacity="0.75" />
+  </g>
+</svg>

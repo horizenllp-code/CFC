@@ -1,9 +1,16 @@
 import React from 'react';
 import { CORE_VALUES } from '../data/cfcData';
+import { PageTab } from '../types';
 
-export const CoreValuesSection: React.FC = () => {
+interface CoreValuesSectionProps {
+  onNavigate?: (tab: PageTab) => void;
+}
+
+export const CoreValuesSection: React.FC<CoreValuesSectionProps> = () => {
   return (
-    <section className="bg-[#0B192C] text-white py-16 lg:py-24 border-b border-slate-800 relative">
+    <section id="secure-handling" className="bg-[#0B192C] text-white py-16 lg:py-24 border-b border-slate-800 relative scroll-mt-20 sm:scroll-mt-24">
+      {/* Secondary anchor for backwards compatibility */}
+      <div id="core-values" className="scroll-mt-24" />
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Section Header (Exact to Screenshot 3) */}

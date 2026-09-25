@@ -9,7 +9,9 @@ interface FleetSectionProps {
 
 export const FleetSection: React.FC<FleetSectionProps> = ({ onNavigate, onOpenQuote }) => {
   return (
-    <section className="bg-[#0B192C] text-white py-16 lg:py-24 border-b border-slate-800">
+    <section id="transportation-fleet" className="bg-[#0B192C] text-white py-16 lg:py-24 border-b border-slate-800 scroll-mt-20 sm:scroll-mt-24">
+      {/* Secondary anchor for backwards compatibility */}
+      <div id="fleet-section" className="scroll-mt-24" />
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           

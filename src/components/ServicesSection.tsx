@@ -25,7 +25,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate, on
   });
 
   return (
-    <section className="bg-[#F8FAFC] text-slate-900 py-16 lg:py-24 border-b border-slate-200">
+    <section id="services-section" className="bg-[#F8FAFC] text-slate-900 py-16 lg:py-24 border-b border-slate-200 scroll-mt-20 sm:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Section Header */}
@@ -45,14 +45,25 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate, on
 
         {/* 6 Service Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {sortedServices.map((service, index) => (
-            <div
-              key={service.id}
-              className={`bg-white border rounded-xs overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group ${
-                index === 0 ? 'border-amber-400/80 ring-2 ring-amber-400/30' : 'border-slate-200'
-              }`}
-            >
-              <div>
+          {sortedServices.map((service, index) => {
+            const semanticAnchorId = 
+              service.id === 'freight-forwarding' ? 'freight-forwarding' :
+              service.id === 'supply-chain-solutions' ? 'supply-chain-network' :
+              service.id === '3pl-value-added' ? 'value-added-operations' :
+              service.id === 'port-customs-clearance' ? 'documentation-compliance' : null;
+
+            return (
+              <div
+                key={service.id}
+                id={`service-${service.id}`}
+                className={`bg-white border rounded-xs overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group scroll-mt-24 ${
+                  index === 0 ? 'border-amber-400/80 ring-2 ring-amber-400/30' : 'border-slate-200'
+                }`}
+              >
+                {semanticAnchorId && (
+                  <div id={semanticAnchorId} className="scroll-mt-24" />
+                )}
+                <div>
                 {/* Photo Header */}
                 <div className="relative aspect-[16/9] overflow-hidden bg-slate-900">
                   <img
@@ -117,7 +128,8 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate, on
                 </button>
               </div>
             </div>
-          ))}
+          );
+        })}
         </div>
 
         {/* Bottom Navigation CTA */}

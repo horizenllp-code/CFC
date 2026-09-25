@@ -15,6 +15,7 @@ interface NavbarProps {
   onNavigate?: (tab: PageTab) => void;
   onOpenTracking: () => void;
   onOpenQuote: () => void;
+  onOpenGateway?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -23,6 +24,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onNavigate,
   onOpenTracking,
   onOpenQuote,
+  onOpenGateway,
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -104,6 +106,17 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Action CTAs */}
           <div className="hidden sm:flex items-center space-x-3">
+            {onOpenGateway && (
+              <button
+                onClick={onOpenGateway}
+                title="View Interactive Supply Chain Architecture Gateway"
+                className="hidden xl:flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded border border-slate-700/80 hover:border-amber-400 text-slate-300 hover:text-amber-300 bg-[#071322] transition-all cursor-pointer"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+                <span>GATEWAY</span>
+              </button>
+            )}
+
             <button
               onClick={onOpenTracking}
               className="flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded border border-slate-700 hover:border-slate-500 text-slate-200 hover:text-white bg-[#0f223a] transition-all cursor-pointer"
@@ -184,6 +197,19 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <FileText className="w-4 h-4 text-slate-950" />
                 <span>REQUEST FREIGHT QUOTE</span>
               </button>
+
+              {onOpenGateway && (
+                <button
+                  onClick={() => {
+                    onOpenGateway();
+                    setMobileMenuOpen(false);
+                  }}
+                  className="w-full flex items-center justify-center gap-2 py-2 rounded border border-amber-400/40 text-xs font-bold text-amber-300 bg-[#0B192C] uppercase tracking-wider"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+                  <span>SUPPLY CHAIN GATEWAY</span>
+                </button>
+              )}
             </div>
           </div>
         )}

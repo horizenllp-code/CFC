@@ -7,9 +7,10 @@ interface FooterProps {
   onNavigate: (tab: PageTab) => void;
   onOpenTracking: () => void;
   onOpenQuote: () => void;
+  onOpenGateway?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenTracking, onOpenQuote }) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenTracking, onOpenQuote, onOpenGateway }) => {
   return (
     <footer className="bg-[#071220] text-slate-300 border-t-2 border-amber-500">
       
@@ -184,9 +185,20 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenTracking, onOp
           <p className="font-semibold text-slate-200">
             CFC Logistics Pvt. Limited — Logistically yours
           </p>
-          <p className="text-slate-500">
-            cfclogistics.in
-          </p>
+          <div className="flex items-center justify-center gap-4 text-slate-500 text-xs">
+            <span>cfclogistics.in</span>
+            {onOpenGateway && (
+              <>
+                <span>•</span>
+                <button
+                  onClick={onOpenGateway}
+                  className="text-amber-400/80 hover:text-amber-300 underline font-mono cursor-pointer"
+                >
+                  Interactive Architecture Gateway
+                </button>
+              </>
+            )}
+          </div>
           <p className="text-[11px] text-slate-500 pt-1">
             © CFC Logistics Pvt. Limited. All rights reserved. • ISO 9001:2008 & I.B.A. Approved Carrier
           </p>

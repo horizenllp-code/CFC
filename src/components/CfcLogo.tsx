@@ -24,9 +24,9 @@ export const CfcLogo: React.FC<CfcLogoProps> = ({
 
   const logoElement = (
     <img
-      src="/logo.svg"
+      src={logoImg}
       onError={(e) => {
-        (e.target as HTMLImageElement).src = logoImg;
+        (e.target as HTMLImageElement).src = '/logo.svg';
       }}
       alt="CFC Logistics Pvt. Ltd."
       className={`${sizeClasses} w-auto object-contain select-none`}
